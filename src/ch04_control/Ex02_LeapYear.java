@@ -32,3 +32,4 @@ public class Ex02_LeapYear {
 		else
 			System.out.println(year + "년은 평년입니다.");
 	}
+}
