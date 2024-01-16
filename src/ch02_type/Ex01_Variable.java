@@ -1,4 +1,4 @@
-package ch01_intro;
+package ch02_type;
 
 public class Ex01_Variable {
 	private static int num = 2;
@@ -33,7 +33,7 @@ public class Ex01_Variable {
 			int num = 5;
 			System.out.println(num); // 블록 안에 있는 num, 5
 		}
-		System.out.println(num);  // 클래스 선언 미테 있는 num, 2--> 변수 안에서만(={ } 안에서만)유효하다.
+		System.out.println(num);  // 클래스 선언 밑에 있는 num, 2--> 변수 안에서만(={ } 안에서만)유효하다.
 	}
 
 }

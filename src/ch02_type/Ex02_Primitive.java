@@ -1,4 +1,4 @@
-package ch01_intro;
+package ch02_type;
 
 public class Ex02_Primitive {
 
