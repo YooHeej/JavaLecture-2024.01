@@ -14,8 +14,8 @@ public class Ex14_PerfectNumber {
 			int divSum = sumOfDivisors(i);
 			if (i == divSum)
 				System.out.println(i);
-		
-	
+		}
+	}
 
 	static int sumOfDivisors(int num) {
 		int divSum = 0;
