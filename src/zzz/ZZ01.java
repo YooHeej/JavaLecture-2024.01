@@ -8,9 +8,12 @@ public class ZZ01 {
 		for (int i = 1; i <= 1000; i++) {
 			numStr += i;
 		}
-		for (int i = 0; i <= 9; i++) {
-			
+		for (int j = 0; j <= 9; j++) {
+			int count = numStr.length() - numStr.replace(Integer.toString(j), "").length();
+			System.out.println(j + " -> " + count);
 		}
+			
 	}
-
 }
+
+
