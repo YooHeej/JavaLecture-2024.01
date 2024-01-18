@@ -9,7 +9,9 @@ public class Ex01_If {
 			System.out.println(score + "점은 평균 이상입니다.");
 		else
 			System.out.println(score + "점은 평균 미만입니다.");
+		
 		char grade;
+		
 		if (score >= 90)
 			grade = 'A';
 		else if (score >= 80)

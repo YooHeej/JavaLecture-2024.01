@@ -25,6 +25,10 @@ public class Ex01_Array {
 			newArray[i] = 1 + (int) (Math.random() * 6);
 		System.out.println(Arrays.toString(newArray));
 		System.out.println(Arrays.toString(score));
+		
+		
+		
+		
 	}
 
 }
