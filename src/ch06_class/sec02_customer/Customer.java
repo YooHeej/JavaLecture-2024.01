@@ -14,6 +14,7 @@ public class Customer {
 		this.name = name;
 		this.age = age;
 		this.adult = age > 19 ? true : false;
+		// this(cid, name, age, age > 19 ? true : false); 이것도 가능 //
 	}
 
 	public Customer(int cid, String name, int age, boolean adult) {
