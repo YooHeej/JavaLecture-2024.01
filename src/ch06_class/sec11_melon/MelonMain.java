@@ -8,8 +8,11 @@ public class MelonMain {
 	public static void main(String[] args) {
 		// 기본 생성자로 객체를 생성하고, Setter로 필드값을 설정
 		MelonChart melonChart = new MelonChart();
-		melonChart.setRank(1); melonChart.setTitle("비의 랩소디");; melonChart.setArtist("임재현");;
-		melonChart.setAlbum("비의 랩소디"); melonChart.setLike(33785);
+		melonChart.setRank(1); 
+		melonChart.setTitle("비의 랩소디");
+		melonChart.setArtist("임재현");
+		melonChart.setAlbum("비의 랩소디"); 
+		melonChart.setLike(33785);
 		System.out.println(melonChart);
 		
 		// 필드값을 객체를 생성할 때 부여

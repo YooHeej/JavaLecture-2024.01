@@ -9,6 +9,7 @@ public class Main {
 		
 		// Student 객체
 		Student student = new Student("마리아", 23, 1234);
+		
 		student.eat(); student.sleep();
 		student.study();
 	}

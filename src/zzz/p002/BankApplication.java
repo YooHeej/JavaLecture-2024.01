@@ -20,7 +20,7 @@ public class BankApplication {
 			if(selectNo == 1) {
 				createAccount();
 			} else if(selectNo == 2) {
-				accountList();
+				//accountList();
 			} else if(selectNo == 3) {
 				deposit();
 			} else if(selectNo == 4) {
@@ -55,7 +55,7 @@ public class BankApplication {
 	}
 	
 	//Account 배열에서 ano와 동일한 Account 객체 찾기
-	private static Account findAccount(String ano) {
+	//private static Account findAccount(String ano) {
 		//작성 위치
-	}
+	//}
 }

@@ -21,6 +21,8 @@ public class Main {
 		worker.workerId = 9876;
 		worker.eat(); worker.sleep();						// 부모 메소드
 		worker.work();
+		
+		
 	}
 
 }

@@ -10,4 +10,5 @@ public class A {
 		System.out.println(a + b + c + d);					// a, b, c, d 모두 사용 가능
 		
 	}
+
 }

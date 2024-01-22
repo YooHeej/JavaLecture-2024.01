@@ -14,7 +14,7 @@ public class Cash {
 		super();
 		this.cash = cash;
 		this.age = age;
-		this.money = age >= 7 && age <= 12
+		//this.money = age >= 7 && age <= 12
 	}
 	
 	
