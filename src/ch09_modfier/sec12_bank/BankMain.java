@@ -1,6 +1,8 @@
-package ch12_interface.sec11_bank;
+package ch09_modfier.sec12_bank;
 
 import java.util.Scanner;
+
+import ch12_interface.sec11_bank.AccountServiceImpl;
 
 public class BankMain {
 	private static Account[] accountArray = new Account[100];
