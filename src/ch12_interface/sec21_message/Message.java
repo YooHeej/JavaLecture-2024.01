@@ -10,15 +10,21 @@ public class Message {
 	private int isDeleted;
 
 	public Message() { }
-	
+	// for Insert
 	public Message(String content, String writer) {
 		this.content = content;
 		this.writer = writer;
 	
 	}
+	// for update
+	public Message(int mid, String content, String writer) {
+		this.mid = mid;
+		this.content = content;
+		this.writer = writer;
 	
+	}
+	// for update
 	public Message(int mid, String content, String writer, LocalDate genTime) {
-		super();
 		this.mid = mid;
 		this.content = content;
 		this.writer = writer;
