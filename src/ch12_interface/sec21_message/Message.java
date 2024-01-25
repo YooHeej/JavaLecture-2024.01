@@ -23,7 +23,7 @@ public class Message {
 		this.writer = writer;
 	
 	}
-	// for update
+	// for Read
 	public Message(int mid, String content, String writer, LocalDate genTime) {
 		this.mid = mid;
 		this.content = content;
@@ -38,7 +38,14 @@ public class Message {
 		this.genTime = genTime;
 		this.isDeleted = isDeleted;
 	}
-
+	
+	@Override
+	public String toString() {
+		return String.format("%d %s %s %s, mid, content,writer, genTime.toString().replaceAll("T", "").substring(0,16)
+		
+		return "Message [mid=" + mid + ", content=" + content + ", writer=" + writer + ", genTime=" + genTime
+				+ ", isDeleted=" + isDeleted + "]";
+	}
 	public int getMid() {
 		return mid;
 	}
