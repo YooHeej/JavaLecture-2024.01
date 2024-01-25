@@ -2,7 +2,7 @@ package ch14_exception;
 
 public class Ex03_UncheckedSolution {
 
-	public static <Animal> void main(String[] args) {
+	public static void main(String[] args) {
 		int a = 3, b = 0;
 		if (b == 0)
 			System.out.println("숫자를 0으로 나울 수 없습니다.");
@@ -17,33 +17,28 @@ public class Ex03_UncheckedSolution {
 			System.out.println(intArray[index]);
 		
 		String str = null;
- 		try {
+		
+ 		if (str != null)
  			System.out.println(str.length());
-		} catch (NullPointerException e) {
-			e.printStackTrace();
-		}s
-		
-		int[] intArray = new int[3];
-		try {
-		System.out.println(intArray[3]);
-		} catch (ArrayIndexOutOfBoundsException e) {
-		e.printStackTrace();
-		
+ 		
+ 		str = "100원";
+ 		int value = Integer.parseInt(str.replace("원", ""));
+ 		System.out.println(value);
+ 		
+ 		Animal a1 = new Cat2();
+ 		Animal a2 = new Dog2();
+ 		Cat2 cat = null;
+ 		if (a1 instanceof Cat2)
+ 			cat = (Cat2) a1;
+ 		if (a2 instanceof Cat2)
+ 			cat = (Cat2) a2;
+ 		
+ 		
+ 		System.out.println("프로그램의 마지막 입니다.");
+ 				
 		}
 		
-		Animal a1 = new Cat2();
-		Animal a2 = new Dog2();
-		Cat2 cat = null;
-		if (a1 instanceof Cat2)
-			cat = (Cat2) a1;
-		if (a2 instanceof Cat2)
-			cat = (Cat2) a2;
-		
-		
-		System.out.println("프로그램의 마지막 입니다.");
 	}
-
-}
 class Animal2 { }
 class Dog2 extends Animal { } 
 class Cat2 extends Animal { }

@@ -2,7 +2,7 @@ package ch14_exception.sec09_class;
 
 public class Main {
 
-	public static void main(String[] args) throws MyException {
+	public static void main(String[] args) {
 		MyException me1 = new MyException();
 		MyException me2 = new MyException("내가 만든 예외 클래스");
 

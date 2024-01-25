@@ -1,7 +1,5 @@
 package ch12_interface.sec11_bank;
 
-import ch09_modfier.sec12_bank.Account;
-
 public interface AccountService {
 
 	void createAccount(Account[] accountArray);

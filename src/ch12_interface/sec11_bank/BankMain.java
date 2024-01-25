@@ -9,28 +9,26 @@ public class BankMain {
 	private static AccountService accountService= new AccountServiceImpl();
 	
 	public static void main(String[] args) {
-		
 		boolean run = true;
 		accountArray[0] = new Account("1000", "제임스", 10000);
 		accountArray[1] = new Account("1001", "마리", 300000);
 		accountArray[2] = new Account("1002", "브라이언", 2000000);
-		
-		while(run) {
+		while (run) {
 			System.out.println("");
 			System.out.println("1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료");
 			System.out.println("");
 			System.out.println("선택> ");
 			
-			int selectNo = scan.nextInt();
+			int selectNo = Integer.parseInt(scan.nextLine());
 			switch(selectNo) {
 			case 1:
-				createAccount(); break;
+				accountService.createAccount(accountArray); break;
 			case 2:
-				accoutList(); break;
+				accountService.accountList(accountArray); break;
 			case 3:
-				deposit(); break;
+				accountService.deposit(accountArray); break;
 			case 4:
-				withdraw(); break;
+				accountService.withdraw(accountArray); break;
 			case 5:
 				run = false; break;
 			default:
@@ -39,9 +37,6 @@ public class BankMain {
 			}
 		}
 		System.out.println("프로그램 종료");
-	}
-		
-
 	}
 
 }

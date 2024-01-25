@@ -32,7 +32,7 @@ public class AccountServiceImpl implements AccountService {
 		
 		for (int i = 0; i < index; i++) {
 			Account acc = accountArray[i];
-			System.out.printf("%s %-6s\t%,10d%n, acc.getAno(), acc.getOwner(), acc.getBalance()");
+			System.out.printf("%s %-6s\t%,10d%n", acc.getAno(), acc.getOwner(), acc.getBalance());
 		}
 		
 	}
@@ -83,7 +83,12 @@ public class AccountServiceImpl implements AccountService {
 	
 	@Override
 	public Account findAccount(String ano, Account[] accountArray) {
-		// TODO Auto-generated method stub
+			for (Account acc: accountArray) {
+				if (acc == null)
+					return null;
+				if (ano.equals(acc.getAno()))
+					return acc;
+			}
 		return null;
 	}
 
