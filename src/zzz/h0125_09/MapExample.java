@@ -17,6 +17,11 @@ public class MapExample {
 		
 		// 작성 위치
 
+		
+		
+		System.out.println("평균점수: " + );
+		System.out.println("최고점수: " + maxScore);
+		System.out.println("최고점수를 받은 아이디: " + name);
 	}
 
 }
