@@ -13,10 +13,10 @@ public class Main {
 //		throw new MyRunTimeException("의도적 런타임 예외 발생");
 		
 		try {
-		for (int i = 0; i <= 10000; i++) {
-			for (int k = 0; k <=100000; k++) {
-				if (i == 100 && k == 100)
-					throw new MyException("의도적 예외 발생");
+			for (int i = 0; i <= 10000; i++) {
+				for (int k = 0; k <=100000; k++) {
+					if (i == 100 && k == 100)
+						throw new MyException("의도적 예외 발생");
 			}
 		}
 		
@@ -25,5 +25,4 @@ public class Main {
 	}
 	 System.out.println("이중 루프 탈출");
   }
-	
 }

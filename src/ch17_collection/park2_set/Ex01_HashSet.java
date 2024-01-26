@@ -12,7 +12,7 @@ public class Ex01_HashSet {
 		set.add("Java"); set.add("collection"); set.add("set");
 		set.add("set");			// 중복 저장 안됨
 		System.out.println(set);
-	
+		
 		// 삭제
 		set.remove("set");							// 특정 원소 삭제
 		System.out.println(set);

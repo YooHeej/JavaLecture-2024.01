@@ -11,9 +11,10 @@ public class Ex11_For {
 			sum += i;		// sum = sum + i;
 		System.out.println("1~100까지 합: " + sum);
 		
+		
 		// 1 ~ 100까지 홀수 합
 		int oddSum = 0;
-		for (int i = 1; i <= 100; i += 2)
+		for (int i = 1; i <= 100; i += 2)		//	i = i + 2;
 			oddSum += i;
 		System.out.println("1~100까지 홀수 합: " + oddSum);
 		

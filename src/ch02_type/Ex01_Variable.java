@@ -28,9 +28,10 @@ public class Ex01_Variable {
 		 * 		- 변수가 선언된 블록({ }) 안에서만 유효
 		 * 
 		 */
+		int num = 0;
 		if (age >= 19) {
 			System.out.println("음주 허용");
-			int num = 5;
+			num = 5;
 			System.out.println(num); // 블록 안에 있는 num, 5
 		}
 		System.out.println(num);  // 클래스 선언 밑에 있는 num, 2--> 변수 안에서만(={ } 안에서만)유효하다.

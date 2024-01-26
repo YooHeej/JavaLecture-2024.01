@@ -8,7 +8,7 @@ public class Ex01_Array {
 		// 배열 생성
 		// 배열을 생성하면서 값을 지정하는 경우
 	
-		int [] score = {80, 90, 78, 93, 65};
+		int[] score = {80, 90, 78, 93, 65};
 		char grade[] = {'B' , 'A' , 'C' , 'A' , 'D'};
 		// 배열을 생성하면서 크기를 지정하는 경우
 		int[] newArray = new int[10];
@@ -25,9 +25,6 @@ public class Ex01_Array {
 			newArray[i] = 1 + (int) (Math.random() * 6);
 		System.out.println(Arrays.toString(newArray));
 		System.out.println(Arrays.toString(score));
-		
-		
-		
 		
 	}
 

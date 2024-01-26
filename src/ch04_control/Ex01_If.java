@@ -5,8 +5,9 @@ public class Ex01_If {
 	public static void main(String[] args) {
 		int score = 60 + (int) (41 * Math.random());		// 60 ~ 100
 		
-		if(score >= 80)
+		if(score >= 80) {
 			System.out.println(score + "점은 평균 이상입니다.");
+		}
 		else
 			System.out.println(score + "점은 평균 미만입니다.");
 		

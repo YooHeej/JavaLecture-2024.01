@@ -18,8 +18,6 @@ public class Ex11_String {
 		Person maria = new Person("마리아", 23, "학생");
 		System.out.println(james);
 		System.out.println(maria);
-		
-
 	}
 
 }
