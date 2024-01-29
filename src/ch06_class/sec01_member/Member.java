@@ -10,7 +10,9 @@ public class Member {
 	
 	// 생성자(Constructor)
 	
-	public Member() { }
+	public Member() { 
+		
+	}
 	
 	public Member(String name, LocalDate birthday, String email) {
 		this.name = name;

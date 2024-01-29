@@ -6,7 +6,7 @@ public interface RemoteControllable {
 	int MAX_VOLUME = 10;						// public static final 생략 가능
 	
 	// 추상 메소드 사용
-	public  abstract void turnOn();
+	public  abstract void turnOn() ;
 	public  abstract void turnOff();
 	void setVolume(int volume);					// public abstract 생략 가능
 }
