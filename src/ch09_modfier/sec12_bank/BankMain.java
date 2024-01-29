@@ -2,15 +2,12 @@ package ch09_modfier.sec12_bank;
 
 import java.util.Scanner;
 
-import ch12_interface.sec11_bank.AccountServiceImpl;
-
 public class BankMain {
 	private static Account[] accountArray = new Account[100];
 	private static Scanner scan = new Scanner(System.in);
-	private static AccountServiceImpl accountService = new AccountServiceImpl();
+	private static int index = 3;
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		boolean run = true;
 		accountArray[0] = new Account("1000", "제임스", 10000);
 		accountArray[1] = new Account("1001", "마리", 300000);
@@ -24,13 +21,13 @@ public class BankMain {
 			int selectNo = Integer.parseInt(scan.nextLine());
 			switch(selectNo) {
 			case 1:
-				accountService.createAccount(accountArray); break;
+				createAccount(); break;
 			case 2:
-				accountService.accoutList(accountArray); break;
+				accoutList(); break;
 			case 3:
-				accountService.deposit(accountArray); break;
+				deposit(); break;
 			case 4:
-				accountService.withdraw(accountArray); break;
+				withdraw(); break;
 			case 5:
 				run = false; break;
 			default:
@@ -39,3 +36,4 @@ public class BankMain {
 			}
 			System.out.println("프로그램 종료");
 		}
+		private
