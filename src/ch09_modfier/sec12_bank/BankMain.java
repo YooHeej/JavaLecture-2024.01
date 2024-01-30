@@ -23,7 +23,7 @@ public class BankMain {
 			case 1:
 				createAccount(); break;
 			case 2:
-				accoutList(); break;
+				accountList(); break;
 			case 3:
 				deposit(); break;
 			case 4:
@@ -34,6 +34,74 @@ public class BankMain {
 				System.out.println("Warning: 1 ~ 5 사이의 숫자만 입력하세요.");
 			
 			}
+			
+		    }
 			System.out.println("프로그램 종료");
+	}
+	private static void createAccount() {
+		System.out.println("-----------");
+		System.out.println(" 계좌 생성");
+		System.out.println("-----------");
+		
+		String ano = "" + (1000 + index);					// index : 현재 빈 곳을 가리킴
+//			System.out.println("계좌 번호> ");
+//			String ano = scan.nextLine();
+		System.out.println("계좌주 이름> ");
+		String owner = scan.nextLine();
+		System.out.println("최초 입금액> ");
+		int balance = Integer.parseInt(scan.nextLine());
+		Account account = new Account(ano, owner, balance);
+		
+		accountArray[index++] = account;
+//			for (int i = 0; i < accountArray.length; i++) {
+//				if (accountArray[i] != null)
+//					continue;
+//				accountArray[i] = account;
+//			}
+		
+		System.out.println("계좌가 생성되었습니다.");
+	}
+	private static void accountList() {
+		System.out.println("-----------");
+		System.out.println(" 계좌 목록");
+		System.out.println("-----------");
+		
+		for (int i = 0; i < index; i++) {
+			Account acc = accountArray[i];
+			System.out.printf("%s %-6\t%,10d%n", acc.getAno(), acc.getOwner(), acc.getBalance());
 		}
-		private
+	}
+	private static void deposit() {
+		System.out.println("-----------");
+		System.out.println(" 입금");
+		System.out.println("-----------");
+		
+		System.out.println("계좌 번호> ");
+		String ano = scan.nextLine();
+		System.out.println("입금액> ");
+		int balance = Integer.parseInt(scan.nextLine());
+		Account account = findAccount(ano);
+		if (account == null) {
+			System.out.println("계좌번호를 확인하세요.");
+			return;
+		}
+		account.setBalance(balance + account.getBalance());
+		System.out.println("입금이 완료되었습니다.");
+		
+		
+	}
+	private static void withdraw() {
+		System.out.println("-----------");
+		System.out.println("  출금");
+		System.out.println("-----------");
+		
+		
+	
+			
+	}
+	private static Account findAccount(String ano) {
+
+		return null;
+	}
+	
+}

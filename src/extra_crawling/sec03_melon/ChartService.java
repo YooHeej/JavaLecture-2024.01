@@ -25,8 +25,8 @@ public class ChartService {
 		String artist = tr.selectFirst(".ellipsis.rank02 > a").text().strip();
 		String album = tr.selectFirst(".ellipsis.rank03 > a").text().strip();
 		String imgSrc = tr.selectFirst("td:nth-child(4) > div > a > img").attr("src");
-		MelonChart ib = new MelonChart(rank, title, artist, album, imgSrc);
-		list.add(ib);
+		MelonChart mel = new MelonChart(rank, title, artist, album, imgSrc);
+		list.add(mel);
 		}
 	 return list;
   }
