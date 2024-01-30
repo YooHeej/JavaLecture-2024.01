@@ -1,17 +1,19 @@
 package Message;
 
+import java.util.List;
+
 public interface MessageService {
 	int DELETED = 1;
 
-	Message findByMid(int mid);
+	Message findByMid(List<Message> mList);
 
-	void messageList();
+	void messageList(List<Message> mList);
 
-	void messageListByWriter(String writer);
+	void messageListByWriter(String writer, List<Message> mList);
 
-	void insertMessage(Message message);
+	Message insertMessage(int id);
 
-	void updateMessage(Message message);
+	Message updateMessage(Message message);
 
-	void deleteMessage(int mid);
+	int deleteMessage(List<Message> mList);
 }

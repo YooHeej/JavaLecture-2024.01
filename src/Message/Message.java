@@ -3,26 +3,13 @@ package Message;
 import java.time.LocalDate;
 
 public class Message {
-	private int mid;
-	private String content;
-	private String writer;
-	private LocalDate genTime;
-	private int isDeleted;
+	private int mid;			//작성번호?
+	private String content;		//내용
+	private String writer;		//작성자
+	private LocalDate genTime;	//작성 시간
+
 	
-	public Message() { }
-	public Message(int mid, String content, String writer, LocalDate genTime) {
-		this.mid = mid;
-		this.content = content;
-		this.writer = writer;
-		this.genTime = genTime;
-	}
-	public Message(int mid, String content, String writer, LocalDate genTime, int isDeleted) {
-		this.mid = mid;
-		this.content = content;
-		this.writer = writer;
-		this.genTime = genTime;
-		this.isDeleted = isDeleted;
-	}
+	
 
 
 	public int getMid() {
@@ -65,15 +52,6 @@ public class Message {
 	}
 
 
-	public int getIsDeleted() {
-		return isDeleted;
-	}
-
-
-	public void setIsDeleted(int isDeleted) {
-		this.isDeleted = isDeleted;
-	}
-	
 	
 	
 }
