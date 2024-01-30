@@ -31,8 +31,52 @@ public class MessageMain {
 				writer = scan.nextLine();
 				messageService.messageListByWriter(writer);
 				break;
+				
+			case 3:
+				System.out.println("");
+				System.out.println("  메세지 쓰기");
+				System.out.println("");
+				System.out.println("Writer 이름> ");
+				writer = scan.nextLine();
+				System.out.println("메세지 내용> ");
+				content = scan.nextLine();
+				message = new Message(content, writer);
+				messageService.insertMessage(message);
+				break;
+			
+			case 4:
+				System.out.println("");
+				System.out.println("  메세지 수정");
+				System.out.println("");
+				System.out.println("메세지 ID> ");
+				mid = Integer.parseInt(scan.nextLine());
+				message = messageService.findByMid(mid);
+				System.out.print("Writer 이름(" + message.getWriter() + ")>");
+				writer = scan.nextLine();
+				System.out.print("메세지 내용(" + message.getContent() + ")> ");
+				content = scan.nextLine();
+				message.setWriter(writer);
+				message.setContent(content);
+				messageService.updateMessage(message);
+				break;
+				
+			case 5:
+				System.out.println("");
+				System.out.println("  메세지 삭제");
+				System.out.println("");
+				System.out.print("메세지 ID> ");
+				mid = Integer.parseInt(scan.nextLine());
+				messageService.deleteMessage(mid);
+				break;
+				
+			case 6:
+				run = false;
+				break;
+			default:
+					System.out.println("Warning: 1 ~ 6 사이의 숫자만 입력하세요.");
 			}
 		}
+		System.out.println("프로그램 종료");
 	}
 
 }

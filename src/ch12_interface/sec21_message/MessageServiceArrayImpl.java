@@ -18,9 +18,9 @@ public class MessageServiceArrayImpl implements MessageService{
 	public Message findByMid(int mid) {
 		for (Message msg: messageArray) {
 			if (msg == null)
-				break;
+					break;
 			if (mid == msg.getMid())
-				return msg;
+					return msg;
 		}
 		return null;
 	}
@@ -29,9 +29,9 @@ public class MessageServiceArrayImpl implements MessageService{
 	public void messageList() {
 		for (Message msg: messageArray) {
 			if (msg == null)
-				break;
+					break;
 			if (msg.getIsDeleted() != MessageService.DELETED)
-				System.out.println(msg);
+					System.out.println(msg);
 		}
 		
 	}
@@ -40,9 +40,9 @@ public class MessageServiceArrayImpl implements MessageService{
 	public void messageListByWriter(String writer) {
 		for (Message msg: messageArray) {
 			if (msg == null)
-				break;
+					break;
 			if (msg.getWriter().equals(writer) && msg.getIsDeleted() != MessageService.DELETED)
-				System.out.println(msg);
+					System.out.println(msg);
 		}
 		
 	}
@@ -60,10 +60,10 @@ public class MessageServiceArrayImpl implements MessageService{
 	public void updateMessage(Message message) {
 		for (int i = 0; i < messageArray.length; i++) {
 			if (messageArray[i] == null)
-				break;
+					break;
 			if (messageArray[i].getMid() == message.getMid()) {
 				messageArray[i] = message;
-				return;
+					return;
 			}
 		}
 		

@@ -33,7 +33,7 @@ public class BankMain {
 			default:
 				System.out.println("Warning: 1 ~ 5 사이의 숫자만 입력하세요.");
 			
-			}
+				}
 			
 		    }
 			System.out.println("프로그램 종료");
@@ -95,13 +95,33 @@ public class BankMain {
 		System.out.println("  출금");
 		System.out.println("-----------");
 		
-		
-	
-			
+		System.out.println("계좌 번호> ");
+		String ano = scan.nextLine();
+		System.out.println("출금액> ");
+		int balance = Integer.parseInt(scan.nextLine());
+		Account account = findAccount(ano);
+		if (account == null) {
+			System.out.println("계좌번호를 확인하세요.");
+			return;
+		}
+		if (account.getBalance() >= balance) {
+			account.setBalance(account.getBalance() - balance);
+			System.out.println("출금이 완료되었습니다.");
+		} else {
+				System.out.println("잔액이 부족합니다.");
+		}
 	}
 	private static Account findAccount(String ano) {
-
-		return null;
-	}
-	
+			for (int i = 0; i < accountArray.length; i++) {
+				if (ano.equals(accountArray[i].getAno()))
+						return accountArray[i];
+			}
+			for (Account acc: accountArray) {
+					if (acc == null)
+							return null;
+					if (ano.equals(acc.getAno()))
+							return acc;
+			}
+			return null;
+		}
 }

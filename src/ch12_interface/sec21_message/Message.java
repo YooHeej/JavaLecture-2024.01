@@ -1,12 +1,12 @@
 package ch12_interface.sec21_message;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Message {
 	private int mid;
 	private String content;
 	private String writer;
-	private LocalDate genTime;
+	private LocalDateTime genTime;
 	private int isDeleted;
 
 	public Message() { }
@@ -24,14 +24,14 @@ public class Message {
 	
 	}
 	// for Read
-	public Message(int mid, String content, String writer, LocalDate genTime) {
+	public Message(int mid, String content, String writer, LocalDateTime genTime) {
 		this.mid = mid;
 		this.content = content;
 		this.writer = writer;
 		this.genTime = genTime;
 	}
 
-	public Message(int mid, String content, String writer, LocalDate genTime, int isDeleted) {
+	public Message(int mid, String content, String writer, LocalDateTime genTime, int isDeleted) {
 		this.mid = mid;
 		this.content = content;
 		this.writer = writer;
@@ -41,7 +41,7 @@ public class Message {
 	
 	@Override
 	public String toString() {
-		return String.format("%d %s %s %s, mid, content,writer, genTime.toString().replaceAll("T", "").substring(0,16)
+		return String.format("%d %s %s %s", mid, content,writer, genTime.toString().replaceAll("T", "").substring(0,16));
 		
 //		return "Message [mid=" + mid + ", content=" + content + ", writer=" + writer + ", genTime=" + genTime
 //				+ ", isDeleted=" + isDeleted + "]";
@@ -70,11 +70,11 @@ public class Message {
 		this.writer = writer;
 	}
 
-	public LocalDate getGenTime() {
+	public LocalDateTime getGenTime() {
 		return genTime;
 	}
 
-	public void setGenTime(LocalDate genTime) {
+	public void setGenTime(LocalDateTime genTime) {
 		this.genTime = genTime;
 	}
 

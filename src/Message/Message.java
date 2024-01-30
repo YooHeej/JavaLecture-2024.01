@@ -50,8 +50,4 @@ public class Message {
 	public void setGenTime(LocalDate genTime) {
 		this.genTime = genTime;
 	}
-
-
-	
-	
 }
