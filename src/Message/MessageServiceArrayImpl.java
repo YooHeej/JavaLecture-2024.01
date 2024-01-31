@@ -36,6 +36,7 @@ public class MessageServiceArrayImpl implements MessageService {
 				chkWriter++;
 			}
 		}
+		
 		if(chkWriter == 0) {
 			System.out.println("찾고자 하는 작성자가 존재하지 않습니다. 다시 확인 부탁드립니다. ");
 		}
