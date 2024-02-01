@@ -24,7 +24,7 @@ SELET 필드명
     LIMIT 숫자 OFFSET 숫자;
 */
 
-SELECT * FROM city;
+SELECT * FROM city;                           # * - 모든 필드
 SELECT NAME, population FROM city;
 SELECT * FROM city LIMIT 10;
 SELECT `name`, population FROM city LIMIT 10; # 필드명을 보존하고 싶을 때 `back quote` 사용
