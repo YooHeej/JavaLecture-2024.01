@@ -6,7 +6,7 @@ package grep;
 	import java.util.regex.Matcher;
 	import java.util.regex.Pattern;
 
-	public class GrepExample {
+	public class g1 {
 	    public static void main(String[] args) {
 	        // 검색할 파일 경로 및 정규 표현식 패턴
 	        String filePath = "파일의_경로";
@@ -33,5 +33,4 @@ package grep;
 	            e.printStackTrace();
 	        }
 	    }
-	}
 }
