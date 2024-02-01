@@ -6,5 +6,5 @@ public class Q01_03 {
 	public static void main(String[] args) {
 		
 	}
-	pu
+	
 }
