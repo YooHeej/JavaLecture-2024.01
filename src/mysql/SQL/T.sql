@@ -42,13 +42,14 @@ SELECT COUNT(*) FROM country WHERE continent='Oceania' = 29
 SELECT COUNT(*) FROM country WHERE continent='Antarctica' = 6 
 SELECT COUNT(*) FROM country WHERE continent='South America' = 15
 
-
-
-
 2 - GNP의 합
-
-
-
+SELECT SUM(GNP) FROM country WHERE continent='Asia';
+SELECT SUM(GNP) FROM country WHERE continent='Europe';
+SELECT SUM(GNP) FROM country WHERE continent='North America';
+SELECT SUM(GNP) FROM country WHERE continent='Africa';
+SELECT SUM(GNP) FROM country WHERE continent='Oceania';
+SELECT SUM(GNP) FROM country WHERE continent='Antarcrica';
+SELECT SUM(GNP) FROM country WHERE continent='South America';
 
 3 - 평균 국가별 GNP
 SELECT AVG(GNP) FROM country WHERE continent='Asia';
