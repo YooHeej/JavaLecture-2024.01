@@ -24,7 +24,7 @@ SELET 필드명
     LIMIT 숫자 OFFSET 숫자;
 */
 
-SELECT * FROM city;
+SELECT * FROM city;                           # * - 모든 필드
 SELECT NAME, population FROM city;
 SELECT * FROM city LIMIT 10;
 SELECT `name`, population FROM city LIMIT 10; # 필드명을 보존하고 싶을 때 `back quote` 사용
@@ -230,3 +230,12 @@ SELECT r.Name countryName, l.Name cityName, l.Population, o.`Language` FROM city
         WHERE r.Continent='Asia' AND o.IsOfficial='T'
         ORDER BY l.Population DESC
         LIMIT 10;
+
+
+/*
+ *  1. 8 Sub Query
+ */
+ # 국내 도시만으로 새로운  테이블을 만드는 경우
+ CREATE TABLE if NOT EXISTS kcity LIKE city;
+ INSERT INTO kcity
+        SELECT * FROM city WHERE countrycode='KOR';
