@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Workspace/Java/jsoup-1.17.2.jar"/>
 	<classpathentry kind="lib" path="C:/Workspace/Java/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Workspace/Java/mysql-connector-j-8.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

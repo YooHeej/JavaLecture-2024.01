@@ -239,3 +239,4 @@ SELECT r.Name countryName, l.Name cityName, l.Population, o.`Language` FROM city
  CREATE TABLE if NOT EXISTS kcity LIKE city;
  INSERT INTO kcity
         SELECT * FROM city WHERE countrycode='KOR';
+SELECT * FROM kcity;
