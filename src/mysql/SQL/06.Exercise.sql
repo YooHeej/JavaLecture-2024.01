@@ -1,6 +1,12 @@
 1. 2009년도에 데뷔한 걸그룹의 히트송?
 #  (걸그룹 이름, 데뷔일, 히트송)
+SELECT l.name, l.debut, r.title FROM girl_group l
+		JOIN song r ON l.hit_song_id=r.sid
+		WHERE l.debut BETWEEN DATE('2009-01-01') AND DATE('2009-12-31');
 
+SELECT l.name, l.debut, r.title FROM girl_group l
+		JOIN song r ON l.hit_song_id=r.sid
+		WHERE l.debut LIKE '2009%';
 
 # 2. 데뷔일자가 빠른 5개 그룹의 히트송?
 # (걸그룹 이름, 데뷔일자, 히트송 제목)
