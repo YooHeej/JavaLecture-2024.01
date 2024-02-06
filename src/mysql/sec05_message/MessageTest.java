@@ -17,7 +17,7 @@ public class MessageTest {
 //		msg.setContent("MessageDao 프로그램을 완성하자.");
 //		msgDao.updateMessage(msg);
 		
-		msgDao.deleteMessage(106);
+//		msgDao.deleteMessage(106);
 		
 		List<Message> list = msgDao.getMessageListByWriter("브라이언");
 		list.forEach(x -> System.out.println(x));
