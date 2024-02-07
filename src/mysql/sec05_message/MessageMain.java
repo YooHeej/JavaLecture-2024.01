@@ -69,6 +69,7 @@ public class MessageMain {
 					System.out.println("-----------");
 					System.out.println("메세지 ID> ");
 					mid = Integer.parseInt(scan.nextLine());
+					messageService.deleteMessage(mid);
 					break;
 			case 6: 
 					run = false;
@@ -80,6 +81,7 @@ public class MessageMain {
 			
 		}
 		System.out.println("프로그램 종료");
+		messageService.close();
 		scan.close();
 
 	}

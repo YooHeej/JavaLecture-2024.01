@@ -1,0 +1,1 @@
+SELECT SUM(GNP) FROM country WHERE continent='Asia';
