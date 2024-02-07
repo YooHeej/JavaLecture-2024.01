@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
+
 import mysql.sec07_bbs.entity.Board;
 
 
@@ -69,20 +71,55 @@ public class BoardDao {
 		// query 값은 검색어
 		public List<Board> getBoardList(String field, String query, int num, int offset) {
 			String sql = "select * from board where isDeleted=0" 
-						+ " title ? uid limit ? offset ?";
-			return null;
+						+ " title ? content ? uid limit ? offset ?";
+			List<Board> list = new ArrayList<Board>();
+			return list;
 		}
 		
 		public void insertBoard(Board board) {
-			
+			String sql = "insert board values (?, ?, ?, ?, default, default, default, default)";
+			try {
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, board.getBid());
+				pstmt.setString(2, board.getTitle());
+				pstmt.setString(3, board.getContent());
+				pstmt.setString(4, board.getUid());
+				
+				pstmt.executeUpdate();
+				pstmt.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		public void updateBoard(Board board) {
+			String sql = "update board set title=?, content=?, uid=?, where bid=?";
+			try {
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, board.getTitle());
+				pstmt.setString(2, board.getContent());
+				pstmt.setString(3, board.getUid());
+				pstmt.setInt(4, board.getBid());
+				
+				pstmt.executeUpdate();
+				pstmt.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			
 		}
 		
 		public void deleteBoard(int bid) {
-			
+			String sql = "update board set isDeleted=1 where bid=?";
+			try {
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, bid);
+				
+				pstmt.executeUpdate();
+				pstmt.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		// field 값은 view 또는 reply
