@@ -8,9 +8,12 @@ public class Reply {
 	private LocalDateTime regTime;
 	private String uid;
 	private int bid;
+	private String uname;
 	
 	public Reply() {	}
 
+	
+	
 	public Reply(int rid, String comment, LocalDateTime regTime, String uid, int bid) {
 		super();
 		this.rid = rid;
@@ -20,11 +23,36 @@ public class Reply {
 		this.bid = bid;
 	}
 
+
+	public Reply(int rid, String comment, LocalDateTime regTime, String uid, int bid, String uname) {
+		this.rid = rid;
+		this.comment = comment;
+		this.regTime = regTime;
+		this.uid = uid;
+		this.bid = bid;
+		this.uname = uname;
+	}
+	
+
 	@Override
 	public String toString() {
 		return "Reply [rid=" + rid + ", comment=" + comment + ", regTime=" + regTime + ", uid=" + uid + ", bid=" + bid
-				+ "]";
+				+ ", uname=" + uname + "]";
 	}
+	
+	
+
+	public String getUname() {
+		return uname;
+	}
+
+
+
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+
+
 
 	public int getRid() {
 		return rid;

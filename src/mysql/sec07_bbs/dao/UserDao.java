@@ -19,7 +19,7 @@ public class UserDao {
 	private Connection conn;
 	
 	public UserDao() {
-		String path = "C:/Workspace/Java/Lesson/src/mysql/mysql.properties";
+		String path = "C:/Workspace/Java/Lesson/src/mysql/sec07_bbs/mysql.properties";
 		try {
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(path));
@@ -64,7 +64,7 @@ public class UserDao {
 	}
 	
 	public List<User> getUserList(int num, int offset) {
-		String sql = "select * from users where isDeleted=0"
+		String sql = "select * from users where isDelete=0"
 					+ " order by regDate desc, uid limit ? offset ?";
 		List<User> list = new ArrayList<User>();
 		try {
@@ -74,11 +74,11 @@ public class UserDao {
 			
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-			User user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
-						rs.getString(4), LocalDate.parse(rs.getString(5)), rs.getInt(6));
-			list.add(user);
+				User user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
+							rs.getString(4), LocalDate.parse(rs.getString(5)), rs.getInt(6));
+				list.add(user);
 			}
-			pstmt.close(); rs.close();
+			rs.close(); pstmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -117,7 +117,7 @@ public class UserDao {
 	}
 	
 	public void deleteUser(String uid) {
-		String sql = "update users set isDeleted=1 where uid=?";
+		String sql = "update users set isDelete=1 where uid=?";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, uid);
