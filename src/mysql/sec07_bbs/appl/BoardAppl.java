@@ -11,7 +11,7 @@ public class BoardAppl {
 	public static void main(String[] args) {
 		BoardService bSvc = new BoardServiceMySQLImpl();
 		
-		List<Board> list = bSvc.getBoardList(1, " ", " ");
+		List<Board> list = bSvc.getBoardList(1, "", "");
 		list.forEach(x -> System.out.println(x.listForm()));
 		System.out.println("=============================================================");
 		

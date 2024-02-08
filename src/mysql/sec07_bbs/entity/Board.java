@@ -60,7 +60,7 @@ public class Board {
 	}
 	
 	public String listForm() {
-		return String.format("%3d %2d %s %s | %s [%d] |", 
+		return String.format("%3d %2d %s | %s | %s [%d] |", 
 					bid, viewCount,
 					modTime.toString().replace("T", " ").substring(2, 16),
 					uname, title, replyCount);

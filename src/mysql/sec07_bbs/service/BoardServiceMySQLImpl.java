@@ -15,7 +15,7 @@ public class BoardServiceMySQLImpl implements BoardService {
 	@Override
 	public List<Board> getBoardList(int page, String field, String query) {
 		int offset = (page - 1) * COUNT_PER_PAGE;
-		if (field == null || field.equals(" ")) {
+		if (field == null || field.equals("")) {
 			field = "title"; query = "%";
 		}
 		List<Board> list = bDao.getBoardList(field, query, COUNT_PER_PAGE, offset);

@@ -77,7 +77,7 @@ public class BoardDao {
 			String sql = "SELECT b.*, u.uname FROM board b"
 					+ "	JOIN users u ON b.uid=u.uid"
 					+ "	WHERE b.isDeleted=0 AND " + field + " LIKE ?"
-					+ "	ORDER BY bid DESC"
+					+ "	ORDER BY bid DESC "
 					+ "	LIMIT ? OFFSET ?";
 			
 			List<Board> list = new ArrayList<Board>();
