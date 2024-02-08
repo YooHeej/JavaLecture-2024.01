@@ -45,25 +45,25 @@ public class ReplyDao {
 				e.printStackTrace();
 		}
 	}
-	
-	public Reply getReply(int rid) {
-		String sql = "select * from reply where rid=?";
-		Reply reply = null;
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, rid);
-			
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				reply = new Reply(rs.getInt(1), rs.getString(2), LocalDateTime.parse(rs.getString(3)),
-						rs.getString(4), rs.getInt(5));
-			}
-			pstmt.close(); rs.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return reply;
-	}
+//	
+//	public Reply getReply(int rid) {
+//		String sql = "select * from reply where rid=?";
+//		Reply reply = null;
+//		try {
+//			PreparedStatement pstmt = conn.prepareStatement(sql);
+//			pstmt.setInt(1, rid);
+//			
+//			ResultSet rs = pstmt.executeQuery();
+//			while (rs.next()) {
+//				reply = new Reply(rs.getInt(1), rs.getString(2), LocalDateTime.parse(rs.getString(3)),
+//						rs.getString(4), rs.getInt(5));
+//			}
+//			pstmt.close(); rs.close();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return reply;
+//	}
 
 	public List<Reply> getReplyList(int bid) {
 //		String sql = "select * from reply where bid=?";
