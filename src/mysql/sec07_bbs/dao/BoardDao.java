@@ -117,13 +117,12 @@ public class BoardDao {
 		}
 		
 		public void updateBoard(Board board) {
-			String sql = "update board set title=?, content=?, uid=?, where bid=?";
+			String sql = "update board set title=?, content=?, where bid=?";
 			try {
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, board.getTitle());
 				pstmt.setString(2, board.getContent());
-				pstmt.setString(3, board.getUid());
-				pstmt.setInt(4, board.getBid());
+				pstmt.setInt(3, board.getBid());
 				
 				pstmt.executeUpdate();
 				pstmt.close();
