@@ -33,7 +33,7 @@ VALUES (default, '화성', 'KOR', 'Kyonggi', 900000),
         (default, '의정부', 'KOR', 'Kyonggi', 200000);
 
 # 강원도 속초시 추가 - default VALUES 활용(auto_increment 포함)
-INSERT INTO kcity(name, countrycode, district) VALUESS('속초', 'KOR', 'Kang-won');
+INSERT INTO kcity(name, countrycode, district) VALUES('속초', 'KOR', 'Kang-won');
 
 # 경기도 광주시 추가 - auto_increment 속성이 설정되어 있어도 ID 값을 임의로 부여 가능
 INSERT INTO kcity VALUES (2600, '광주', 'KOR', 'Kyonggi', 300000);
