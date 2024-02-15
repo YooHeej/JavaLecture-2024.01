@@ -70,7 +70,7 @@ public class CityDao {
 	    public List<City> getCityList(String field, String query, int num, int offset) {
 	    	
 	    	String sql = "select * from city"
-	    				+ " WHERE " + field + " =?"
+	    				+ " WHERE " + field + "=?"
 	    				+ " LIMIT ? OFFSET ?";
 	    			
 	    	List<City> list = new ArrayList<City>();
