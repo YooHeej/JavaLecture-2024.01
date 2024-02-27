@@ -31,3 +31,6 @@ SELECT * FROM song INTO OUTFILE
     FIELDS TERMINATED BY ','
     ENCLOSED BY '"'
     LINES TERMINATED BY '\n';
+
+# 데이터 확인
+SELECT * FROM song;
