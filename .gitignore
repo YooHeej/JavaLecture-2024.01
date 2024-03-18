@@ -26,3 +26,5 @@ mysql.properties
 hs_err_pid*
 replay_pid*
 /.metadata/
+bin/dog/PRO.erm
+src/dog/PRO.erm
